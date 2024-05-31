@@ -1,47 +1,16 @@
-﻿using System;
-using System.Text;
-using System.Threading.Tasks;
-using MQTTnet;
-using MQTTnet.Client;
-class Program
+﻿namespace demo_Qr_Mqtt
 {
-    static async Task Main(string[] args)
+    class Program
     {
-        var factory = new MqttFactory();
-        var mqttClient = factory.CreateMqttClient();
-            var dateNow = DateTime.Now;
-
-        var options = new MqttClientOptionsBuilder()
-            .WithClientId("MqttQrReaderClient")
-            .WithTcpServer("10.5.235.195", 1883) // Replace with your MQTT broker host
-            .WithCleanSession()
-            .Build();
-
-        mqttClient.ApplicationMessageReceivedAsync += e =>
+        static async Task Main(string[] args)
         {
-            var studentCin = Encoding.UTF8.GetString(e.ApplicationMessage.Payload);
-            Console.WriteLine($"Received message: date :  {dateNow} , {studentCin} ");
-            return Task.CompletedTask;
-        };
+            var mqttClientHandler = new MqttClientHandler();
+            await mqttClientHandler.StartAsync();
 
-        mqttClient.ConnectedAsync += async e =>
-        {
-            Console.WriteLine("Connected to MQTT broker");
-            await mqttClient.SubscribeAsync(new MqttTopicFilterBuilder().WithTopic("attendance/scan").Build());
-            Console.WriteLine("Subscribed to topic 'attendance/scan'");
-        };
+            Console.WriteLine("Press any key to exit");
+            Console.ReadLine();
 
-        mqttClient.DisconnectedAsync += e =>
-        {
-            Console.WriteLine("Disconnected from MQTT broker");
-            return Task.CompletedTask;
-        };
-
-        await mqttClient.ConnectAsync(options);
-
-        Console.WriteLine("Press any key to exit");
-        Console.ReadLine();
-
-        await mqttClient.DisconnectAsync();
+            await mqttClientHandler.StopAsync();
+        }
     }
 }
