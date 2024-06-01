@@ -9,7 +9,7 @@ class Program
     {
         var factory = new MqttFactory();
         var mqttClient = factory.CreateMqttClient();
-            var dateNow = DateTime.Now;
+        var dateNow = DateTime.Now;
 
         var options = new MqttClientOptionsBuilder()
             .WithClientId("MqttQrReaderClient")
