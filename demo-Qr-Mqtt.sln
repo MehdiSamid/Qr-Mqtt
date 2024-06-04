@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "demo-Qr-Mqtt", "demo-Qr-Mqtt.csproj", "{983C0E2B-3AE3-46BB-8065-ADB5E760B1B7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "..\Api\Api.csproj", "{D74160AE-C91D-44E1-9323-FD41ACB70779}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "C:\Users\souhaib\source\repos\Api\Api.csproj", "{7DC80519-5BD0-47BB-8B5B-F53652353CE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{983C0E2B-3AE3-46BB-8065-ADB5E760B1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{983C0E2B-3AE3-46BB-8065-ADB5E760B1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{983C0E2B-3AE3-46BB-8065-ADB5E760B1B7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D74160AE-C91D-44E1-9323-FD41ACB70779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D74160AE-C91D-44E1-9323-FD41ACB70779}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D74160AE-C91D-44E1-9323-FD41ACB70779}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D74160AE-C91D-44E1-9323-FD41ACB70779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC80519-5BD0-47BB-8B5B-F53652353CE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC80519-5BD0-47BB-8B5B-F53652353CE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC80519-5BD0-47BB-8B5B-F53652353CE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC80519-5BD0-47BB-8B5B-F53652353CE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
